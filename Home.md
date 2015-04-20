@@ -1,1 +1,1 @@
-Welcome to the openvr wiki!
+[API Documentation](https://github.com/ValveSoftware/openvr/wiki/API-Documentation)
