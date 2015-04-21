@@ -1,4 +1,4 @@
-`/** Identifies the graphics API for the associated device */
+/** Identifies the graphics API for the associated device */
 enum Compositor_DeviceType
 {
 	Compositor_DeviceType_None,
@@ -128,4 +128,3 @@ public:
 	virtual bool ComputeOverlayIntersection( const Compositor_OverlaySettings* pSettings, float fAspectRatio, vr::TrackingUniverseOrigin eOrigin, vr::HmdVector3_t vSource, vr::HmdVector3_t vDirection, vr::HmdVector2_t *pvecIntersectionUV, vr::HmdVector3_t *pvecIntersectionTrackingSpace ) = 0;
 
 };
-`
