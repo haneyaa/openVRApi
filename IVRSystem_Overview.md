@@ -21,7 +21,7 @@ Each tracked device has a class that is one of:
 
 The vr::IVRSystem interface contains the following functions:
 * Display - Functions to figure out where to put a window, how to create viewports and render targets, and how to render into those surfaces.
-  * [GetWindowBounds](IVRSystem::GetWindowBounds)
+  * [GetWindowBounds](https://github.com/ValveSoftware/openvr/wiki/IVRSystem::GetWindowBounds)
   * [GetRecommendedRenderTargetSize](IVRSystem::GetRecommendedRenderTargetSize)
   * [GetEyeOutputViewport](IVRSystem::GetEyeOutputViewport)
   * [GetProjectionMatrix](IVRSystem::GetProjectionMatrix)
