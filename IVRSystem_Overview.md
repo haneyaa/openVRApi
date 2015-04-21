@@ -28,7 +28,7 @@ The vr::IVRSystem interface contains the following functions:
   * [GetProjectionMatrix](https://github.com/ValveSoftware/openvr/wiki/IVRSystem::GetProjectionMatrix)
   * [GetProjectionRaw](https://github.com/ValveSoftware/openvr/wiki/IVRSystem::GetProjectionRaw)
   * [ComputeDistortion](https://github.com/ValveSoftware/openvr/wiki/IVRSystem::ComputeDistortion)
-  * [GetEyeToHeadTransform](https://github.com/ValveSoftware/openvr/wiki/IVRSystem::GetWindowBounds)
+  * [GetEyeToHeadTransform](https://github.com/ValveSoftware/openvr/wiki/IVRSystem::GetEyeToHeadTransform)
   * [GetTimeSinceLastVsync](https://github.com/ValveSoftware/openvr/wiki/IVRSystem::GetTimeSinceLastVsync)
   * [GetDXGIOutputInfo](https://github.com/ValveSoftware/openvr/wiki/IVRSystem::GetDXGIOutputInfo)
   * [GetD3D9AdapterIndex](https://github.com/ValveSoftware/openvr/wiki/IVRSystem::GetD3D9AdapterIndex)
