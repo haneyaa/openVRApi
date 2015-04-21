@@ -19,9 +19,9 @@ Each tracked device has a class that is one of:
 
 # Interface Functions
 
-The vr::IVRSystem interface contains functions in several categories:
+The vr::IVRSystem interface contains the following functions:
 * Display - Functions to figure out where to put a window, how to create viewports and render targets, and how to render into those surfaces.
-  * void GetWindowBounds( int32_t *pnX, int32_t *pnY, uint32_t *pnWidth, uint32_t *pnHeight )
+  * [GetWindowBounds](IVRSystem_GetWindowBounds)
   * void GetRecommendedRenderTargetSize( uint32_t *pnWidth, uint32_t *pnHeight )
   * void GetEyeOutputViewport( Hmd_Eye eEye, uint32_t *pnX, uint32_t *pnY, uint32_t *pnWidth, uint32_t *pnHeight )
   * HmdMatrix44_t GetProjectionMatrix( Hmd_Eye eEye, float fNearZ, float fFarZ, GraphicsAPIConvention eProjType )
