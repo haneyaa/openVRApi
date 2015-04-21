@@ -10,7 +10,7 @@ Because the OpenVR API causes the game to connect to any attached VR hardware, i
 `vr::IVRSystem *openvr::VR_Init( vr::`[`HmdError`](https://github.com/ValveSoftware/openvr/wiki/HmdError)` *peError )`
 
 The call will return a vr::IVRSystem pointer that allows the game to call other OpenVR API methods. If something fails the call will return NULL and peError will be set to an error code that indicates what the problem was.
-peError - The error code that occurred or vr::HmdError_None if there was no error. See `[vr::HmdError](https://github.com/ValveSoftware/openvr/wiki/HmdError)` for possible error codes.
+peError - The error code that occurred or vr::HmdError_None if there was no error. See [`vr::HmdError`](https://github.com/ValveSoftware/openvr/wiki/HmdError) for possible error codes.
 
 `void openvr::VR_Shutdown()`
 
