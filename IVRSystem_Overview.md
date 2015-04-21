@@ -21,48 +21,48 @@ Each tracked device has a class that is one of:
 
 The vr::IVRSystem interface contains functions in several categories:
 * Display - Functions to figure out where to put a window, how to create viewports and render targets, and how to render into those surfaces.
-** void GetWindowBounds( int32_t *pnX, int32_t *pnY, uint32_t *pnWidth, uint32_t *pnHeight )
-**void GetRecommendedRenderTargetSize( uint32_t *pnWidth, uint32_t *pnHeight )
-** void GetEyeOutputViewport( Hmd_Eye eEye, uint32_t *pnX, uint32_t *pnY, uint32_t *pnWidth, uint32_t *pnHeight )
-** HmdMatrix44_t GetProjectionMatrix( Hmd_Eye eEye, float fNearZ, float fFarZ, GraphicsAPIConvention eProjType )
-** void GetProjectionRaw( Hmd_Eye eEye, float *pfLeft, float *pfRight, float *pfTop, float *pfBottom )
-** virtual DistortionCoordinates_t ComputeDistortion( Hmd_Eye eEye, float fU, float fV )
-** HmdMatrix34_t GetEyeToHeadTransform( Hmd_Eye eEye )
-** bool GetTimeSinceLastVsync( float *pfSecondsSinceLastVsync, uint64_t *pulFrameCounter )
-** int32_t GetD3D9AdapterIndex()
-** void GetDXGIOutputInfo( int32_t *pnAdapterIndex, int32_t *pnAdapterOutputIndex )
-** bool AttachToWindow( void *hWnd )
+* * void GetWindowBounds( int32_t *pnX, int32_t *pnY, uint32_t *pnWidth, uint32_t *pnHeight )
+* * void GetRecommendedRenderTargetSize( uint32_t *pnWidth, uint32_t *pnHeight )
+* * void GetEyeOutputViewport( Hmd_Eye eEye, uint32_t *pnX, uint32_t *pnY, uint32_t *pnWidth, uint32_t *pnHeight )
+* * HmdMatrix44_t GetProjectionMatrix( Hmd_Eye eEye, float fNearZ, float fFarZ, GraphicsAPIConvention eProjType )
+* * void GetProjectionRaw( Hmd_Eye eEye, float *pfLeft, float *pfRight, float *pfTop, float *pfBottom )
+* * virtual DistortionCoordinates_t ComputeDistortion( Hmd_Eye eEye, float fU, float fV )
+* * HmdMatrix34_t GetEyeToHeadTransform( Hmd_Eye eEye )
+* * bool GetTimeSinceLastVsync( float *pfSecondsSinceLastVsync, uint64_t *pulFrameCounter )
+* * int32_t GetD3D9AdapterIndex()
+* * void GetDXGIOutputInfo( int32_t *pnAdapterIndex, int32_t *pnAdapterOutputIndex )
+* * bool AttachToWindow( void *hWnd )
 * Tracking - Functions to compute the pose of tracked devices
-** void GetDeviceToAbsoluteTrackingPose( TrackingUniverseOrigin eOrigin, float fPredictedSecondsToPhotonsFromNow, VR_ARRAY_COUNT(unTrackedDevicePoseArrayCount) TrackedDevicePose_t *pTrackedDevicePoseArray, uint32_t unTrackedDevicePoseArrayCount )
-** void ResetSeatedZeroPose()
-** HmdMatrix34_t GetSeatedZeroPoseToStandingAbsoluteTrackingPose()
+* * void GetDeviceToAbsoluteTrackingPose( TrackingUniverseOrigin eOrigin, float fPredictedSecondsToPhotonsFromNow, VR_ARRAY_COUNT(unTrackedDevicePoseArrayCount) TrackedDevicePose_t *pTrackedDevicePoseArray, uint32_t unTrackedDevicePoseArrayCount )
+* * void ResetSeatedZeroPose()
+* * HmdMatrix34_t GetSeatedZeroPoseToStandingAbsoluteTrackingPose()
 * Render Model Functions - Access to models and textures that match the actual physical appearance of devices wherever possible.
-** bool LoadRenderModel( const char *pchRenderModelName, RenderModel_t *pRenderModel )
-** void FreeRenderModel( RenderModel_t *pRenderModel )
+* * bool LoadRenderModel( const char *pchRenderModelName, RenderModel_t *pRenderModel )
+* * void FreeRenderModel( RenderModel_t *pRenderModel )
 * Property functions - Access to non-tracking information about tracked devices
-** TrackedDeviceClass GetTrackedDeviceClass( vr::TrackedDeviceIndex_t unDeviceIndex ) = 0;
-** bool IsTrackedDeviceConnected( vr::TrackedDeviceIndex_t unDeviceIndex ) = 0;
-** bool GetBoolTrackedDeviceProperty( vr::TrackedDeviceIndex_t unDeviceIndex, TrackedDeviceProperty prop, TrackedPropertyError *pError = 0L ) = 0;
-** float GetFloatTrackedDeviceProperty( vr::TrackedDeviceIndex_t unDeviceIndex, TrackedDeviceProperty prop, TrackedPropertyError *pError = 0L ) = 0;
-** int32_t GetInt32TrackedDeviceProperty( vr::TrackedDeviceIndex_t unDeviceIndex, TrackedDeviceProperty prop, TrackedPropertyError *pError = 0L ) = 0;
-** uint64_t GetUint64TrackedDeviceProperty( vr::TrackedDeviceIndex_t unDeviceIndex, TrackedDeviceProperty prop, TrackedPropertyError *pError = 0L ) = 0;
-** HmdMatrix34_t GetMatrix34TrackedDeviceProperty( vr::TrackedDeviceIndex_t unDeviceIndex, TrackedDeviceProperty prop, TrackedPropertyError *pError = 0L ) = 0;
-** uint32_t GetStringTrackedDeviceProperty( vr::TrackedDeviceIndex_t unDeviceIndex, TrackedDeviceProperty prop, VR_OUT_STRING() char *pchValue, uint32_t unBufferSize, TrackedPropertyError *pError = 0L ) = 0;
-** const char *GetPropErrorNameFromEnum( TrackedPropertyError error ) = 0;
+* * TrackedDeviceClass GetTrackedDeviceClass( vr::TrackedDeviceIndex_t unDeviceIndex ) = 0;
+* * bool IsTrackedDeviceConnected( vr::TrackedDeviceIndex_t unDeviceIndex ) = 0;
+* * bool GetBoolTrackedDeviceProperty( vr::TrackedDeviceIndex_t unDeviceIndex, TrackedDeviceProperty prop, TrackedPropertyError *pError = 0L ) = 0;
+* * float GetFloatTrackedDeviceProperty( vr::TrackedDeviceIndex_t unDeviceIndex, TrackedDeviceProperty prop, TrackedPropertyError *pError = 0L ) = 0;
+* * int32_t GetInt32TrackedDeviceProperty( vr::TrackedDeviceIndex_t unDeviceIndex, TrackedDeviceProperty prop, TrackedPropertyError *pError = 0L ) = 0;
+* * uint64_t GetUint64TrackedDeviceProperty( vr::TrackedDeviceIndex_t unDeviceIndex, TrackedDeviceProperty prop, TrackedPropertyError *pError = 0L ) = 0;
+* * HmdMatrix34_t GetMatrix34TrackedDeviceProperty( vr::TrackedDeviceIndex_t unDeviceIndex, TrackedDeviceProperty prop, TrackedPropertyError *pError = 0L ) = 0;
+* * uint32_t GetStringTrackedDeviceProperty( vr::TrackedDeviceIndex_t unDeviceIndex, TrackedDeviceProperty prop, VR_OUT_STRING() char *pchValue, uint32_t unBufferSize, TrackedPropertyError *pError = 0L ) = 0;
+* * const char *GetPropErrorNameFromEnum( TrackedPropertyError error ) = 0;
 * Event Methods - Access to events generated by tracked devices or the system itself
-** bool PollNextEvent( VREvent_t *pEvent ) = 0;
-** bool PollNextEventWithPose( TrackingUniverseOrigin eOrigin, vr::VREvent_t *pEvent, vr::TrackedDevicePose_t *pTrackedDevicePose ) = 0;
-** const char *GetEventTypeNameFromEnum( EVREventType eType ) = 0;
+* * bool PollNextEvent( VREvent_t *pEvent ) = 0;
+* * bool PollNextEventWithPose( TrackingUniverseOrigin eOrigin, vr::VREvent_t *pEvent, vr::TrackedDevicePose_t *pTrackedDevicePose ) = 0;
+* * const char *GetEventTypeNameFromEnum( EVREventType eType ) = 0;
 * Rendering Helper Methods - Utility functions that help with rendering
-** HiddenAreaMesh_t GetHiddenAreaMesh( Hmd_Eye eEye )
+* * HiddenAreaMesh_t GetHiddenAreaMesh( Hmd_Eye eEye )
 * Controller Methods - Methods for interacting with controllers
-** bool GetControllerState( vr::TrackedDeviceIndex_t unControllerDeviceIndex, vr::VRControllerState_t *pControllerState ) = 0;
-** bool GetControllerStateWithPose( TrackingUniverseOrigin eOrigin, vr::TrackedDeviceIndex_t unControllerDeviceIndex, vr::VRControllerState_t *pControllerState, TrackedDevicePose_t *pTrackedDevicePose ) = 0;
-** void TriggerHapticPulse( vr::TrackedDeviceIndex_t unControllerDeviceIndex, uint32_t unAxisId, unsigned short usDurationMicroSec ) = 0;
-** const char *GetButtonIdNameFromEnum( EVRButtonId eButtonId ) = 0;
-** const char *GetControllerAxisTypeNameFromEnum( EVRControllerAxisType eAxisType ) = 0;
-** bool HandleControllerOverlayInteractionAsMouse( const vr::Compositor_OverlaySettings & overlaySettings, 	vr::HmdVector2_t vecWindowClientPositionOnScreen, vr::HmdVector2_t vecWindowClientSize,		vr::TrackedDeviceIndex_t unControllerDeviceIndex, vr::EVRControllerEventOutputType eOutputType	)
-** bool CaptureInputFocus() = 0;
-** void ReleaseInputFocus() = 0;
-** bool IsInputFocusCapturedByAnotherProcess() = 0;
+* * bool GetControllerState( vr::TrackedDeviceIndex_t unControllerDeviceIndex, vr::VRControllerState_t *pControllerState ) = 0;
+* * bool GetControllerStateWithPose( TrackingUniverseOrigin eOrigin, vr::TrackedDeviceIndex_t unControllerDeviceIndex, vr::VRControllerState_t *pControllerState, TrackedDevicePose_t *pTrackedDevicePose ) = 0;
+* * void TriggerHapticPulse( vr::TrackedDeviceIndex_t unControllerDeviceIndex, uint32_t unAxisId, unsigned short usDurationMicroSec ) = 0;
+* * const char *GetButtonIdNameFromEnum( EVRButtonId eButtonId ) = 0;
+* * const char *GetControllerAxisTypeNameFromEnum( EVRControllerAxisType eAxisType ) = 0;
+* * bool HandleControllerOverlayInteractionAsMouse( const vr::Compositor_OverlaySettings & overlaySettings, 	vr::HmdVector2_t vecWindowClientPositionOnScreen, vr::HmdVector2_t vecWindowClientSize,		vr::TrackedDeviceIndex_t unControllerDeviceIndex, vr::EVRControllerEventOutputType eOutputType	)
+* * bool CaptureInputFocus() = 0;
+* * void ReleaseInputFocus() = 0;
+* * bool IsInputFocusCapturedByAnotherProcess() = 0;
 
