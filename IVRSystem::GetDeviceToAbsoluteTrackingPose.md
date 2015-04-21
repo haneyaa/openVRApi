@@ -27,7 +27,7 @@ and receive poses relative to the chaperone soft bounds. TrackingUniverseRawAndU
 probably not be used unless the application is the chaperone calibration tool itself, but will provide
 poses relative to the hardware-specific coordinate system in the driver.
 
-** Computing seconds to photons **
+**Computing seconds to photons**
 
 The number of seconds from now to when the next photons will come out of the HMD can be computed automatically. This assumes that the rendering pipeline doesn't have any extra frames buffering.
 
