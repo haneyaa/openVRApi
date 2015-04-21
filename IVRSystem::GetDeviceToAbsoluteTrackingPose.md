@@ -36,5 +36,8 @@ Example:
 	float fSecondsSinceLastVsync;
 	pVRSystem->GetTimeSinceLastVsync( &fSecondsSinceLastVsync, NULL );
 
-	float fFrameDuration = 1.f / pVRSystem->GetFloatTrackedDeviceProperty( vr::k_unTrackedDeviceIndex_Hmd, vr::Prop_DisplayFrequency_Float );
-	float fPredictedSecondsFromNow = fFrameDuration - fSecondsSinceLastVsync + pVRSystem->GetFloatTrackedDeviceProperty( vr::k_unTrackedDeviceIndex_Hmd, vr::Prop_SecondsFromVsyncToPhotons_Float );
+	float fDisplayFrequency = pVRSystem->GetFloatTrackedDeviceProperty( vr::k_unTrackedDeviceIndex_Hmd, vr::Prop_DisplayFrequency_Float );
+	float fFrameDuration = 1.f / fDisplayFrequency;
+	float fVsyncToPhotons = pVRSystem->GetFloatTrackedDeviceProperty( vr::k_unTrackedDeviceIndex_Hmd, vr::Prop_SecondsFromVsyncToPhotons_Float );
+	
+	float fPredictedSecondsFromNow = fFrameDuration - fSecondsSinceLastVsync + fVsyncToPhotons;
