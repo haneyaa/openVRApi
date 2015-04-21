@@ -23,6 +23,21 @@ Returns a static property for a tracked device. The different typed GetXTrackedD
 
 **String Properties**
 
-Because the application owns the buffer to fill with a string property, retrieving a string property is a little different. `GetStringTrackedDeviceProperty` returns the number of bytes necessary to hold the string, including the trailing null. If the buffer wasn't large enough it passes back TrackedProp_StringExceedsMaximumLength as the error and doesn't fill the string into the buffer.
+Because the application owns the buffer to fill with a string property, retrieving a string property is a little different. `GetStringTrackedDeviceProperty` returns the number of bytes necessary to hold the string, including the trailing null. If the buffer wasn't large enough it passes back TrackedProp_BufferTooSmall as the error and doesn't fill the string into the buffer.
 
 Strings will generally fit in buffers of k_unTrackingStringSize characters.
+
+**Property Errors**
+
+TrackedPropertyError will be one of:
+
+* `TrackedProp_Success` - The property request was successful.
+* `TrackedProp_WrongDataType` - The property was requested with the wrong typed function.
+* `TrackedProp_WrongDeviceClass` - The property was requested on a tracked device with the wrong class.
+* `TrackedProp_BufferTooSmall` - The string property will not fit in the provided buffer. The buffer size needed is returned.
+* `TrackedProp_UnknownProperty` - The property enum value is unknown.
+* `TrackedProp_InvalidDevice` - The tracked device index was invalid.
+* `TrackedProp_CouldNotContactServer` - OpenVR could not contact vrserver to query the device for this property.
+* `TrackedProp_ValueNotProvidedByDevice` - The driver for this device returned that it does not provide this specific property for this device.
+* `TrackedProp_StringExceedsMaximumLength` - The string property value returned by a driver exceeded the maximum property length of 32k.
+
