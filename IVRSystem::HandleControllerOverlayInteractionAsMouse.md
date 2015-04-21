@@ -1,6 +1,7 @@
 	bool HandleControllerOverlayInteractionAsMouse( 
 		const vr::Compositor_OverlaySettings & overlaySettings, 
-		vr::HmdVector2_t vecWindowClientPositionOnScreen, vr::HmdVector2_t vecWindowClientSize,
+		vr::HmdVector2_t vecWindowClientPositionOnScreen, 
+		vr::HmdVector2_t vecWindowClientSize,
 		vr::TrackedDeviceIndex_t unControllerDeviceIndex, 
 		vr::EVRControllerEventOutputType eOutputType
 		)
