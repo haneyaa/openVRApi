@@ -22,6 +22,7 @@ If it is called every frame it will hurt performance.
 **Render model structs**
 
 These structures are used by the render model functions:
+
 	/** a single vertex in a render model */
 	struct RenderModel_Vertex_t
 	{
