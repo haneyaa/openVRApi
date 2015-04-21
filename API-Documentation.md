@@ -7,7 +7,7 @@ The API is implemented as a set of C++ interface classes full of pure virtual fu
 
 Because the OpenVR API causes the game to connect to any attached VR hardware, it is not initialized automatically. To initialize the API and get access to the vr::IVRSystem interface call the openvr::VR_Init function. To close down your connection to the hardware and release your vr::IVRSystem interface, call openvr::VR_Shutdown.
 
-`vr::IVRSystem *openvr::VR_Init( vr::HmdError *peError)`
+`vr::IVRSystem *openvr::VR_Init( vr::`[`HmdError`](https://github.com/ValveSoftware/openvr/wiki/HmdError)` *peError )`
 
 The call will return a vr::IVRSystem pointer that allows the game to call other OpenVR API methods. If something fails the call will return NULL and peError will be set to an error code that indicates what the problem was.
 peError - The error code that occurred or vr::HmdError_None if there was no error. See `[vr::HmdError](https://github.com/ValveSoftware/openvr/wiki/HmdError)` for possible error codes.
@@ -37,7 +37,7 @@ This function will return true in situations where vr::VR_Init() will return NUL
 This function returns an English translation of vr::HmdError enum values. It can be called any time, regardless of whether the VR system is started up.
 
 
-`void *VR_GetGenericInterface( const char *pchInterfaceVersion, vr::HmdError *peError )`
+`void *VR_GetGenericInterface( const char *pchInterfaceVersion, vr::`[`HmdError`](https://github.com/ValveSoftware/openvr/wiki/HmdError)` *peError )`
 
 Requests an interface by name from OpenVR. It will return NULL and pass back an error in peError if the interface can't be found. It will always return NULL if openvr::VR_Init() has not been called successfully.
 
