@@ -21,11 +21,11 @@ Each tracked device has a class that is one of:
 
 The vr::IVRSystem interface contains the following functions:
 * Display - Functions to figure out where to put a window, how to create viewports and render targets, and how to render into those surfaces.
-  * [GetWindowBounds](IVRSystem_GetWindowBounds)
-  * void GetRecommendedRenderTargetSize( uint32_t *pnWidth, uint32_t *pnHeight )
-  * void GetEyeOutputViewport( Hmd_Eye eEye, uint32_t *pnX, uint32_t *pnY, uint32_t *pnWidth, uint32_t *pnHeight )
-  * HmdMatrix44_t GetProjectionMatrix( Hmd_Eye eEye, float fNearZ, float fFarZ, GraphicsAPIConvention eProjType )
-  * void GetProjectionRaw( Hmd_Eye eEye, float *pfLeft, float *pfRight, float *pfTop, float *pfBottom )
+  * [GetWindowBounds](IVRSystem::GetWindowBounds)
+  * [GetRecommendedRenderTargetSize](IVRSystem::GetRecommendedRenderTargetSize)
+  * [GetEyeOutputViewport](IVRSystem::GetEyeOutputViewport)
+  * [GetProjectionMatrix](IVRSystem::GetProjectionMatrix)
+  * [GetProjectionRaw](IVRSystem::GetProjectionRaw)
   * virtual DistortionCoordinates_t ComputeDistortion( Hmd_Eye eEye, float fU, float fV )
   * HmdMatrix34_t GetEyeToHeadTransform( Hmd_Eye eEye )
   * bool GetTimeSinceLastVsync( float *pfSecondsSinceLastVsync, uint64_t *pulFrameCounter )
