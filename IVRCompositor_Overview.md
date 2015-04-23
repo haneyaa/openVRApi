@@ -1,42 +1,67 @@
-/** Identifies the graphics API for the associated device */
-enum Compositor_DeviceType
-{
-	Compositor_DeviceType_None,
-	Compositor_DeviceType_D3D9,
-	Compositor_DeviceType_D3D9Ex,
-	Compositor_DeviceType_D3D10,
-	Compositor_DeviceType_D3D11,
-	Compositor_DeviceType_OpenGL
-};
+#Overview#
 
+The vr::IVRCompositor interfaces provides access to the Compositor subsystem.  The Compositor simplifies the process of displaying images to the user by taking care of distortion, prediction, synchronization and other subtle issues that can be a challenge to get operating properly for a solid VR experience.
 
-/** Provides a single frame's timing information to the app */
-struct Compositor_FrameTiming
-{
-	uint32_t size; // sizeof(Compositor_FrameTiming)
-	double frameStart;
-	float frameVSync; // seconds from frame start
-	uint32_t droppedFrames;
-	uint32_t frameIndex;
-	vr::TrackedDevicePose_t pose;
-};
+Applications call WaitGetPoses to get the set of poses used to render the camera and other tracked objects, render the left and right eyes as normal (using the info provided by IVRSystem) and finally Submit those undistorted textures for the Compositor to display in its own window.
 
+It is recommended that you continue Presenting your application's own window, reusing either the left or right eye camera render target to draw a single quad (perhaps cropped to a lower fov to hide the hidden area mask).
 
-/** Allows the application to control what part of the provided texture will be used in the
-* frame buffer. */
-struct Compositor_TextureBounds
-{
-	float uMin, vMin;
-	float uMax, vMax;
-};
+Example:
 
-#pragma pack( pop )
+    SetGraphicsDevice
+    while Running:
+        WaitGetPoses
+        Render Left and Right cameras
+        Submit
+        Update game logic
 
+Alternatively, you may wish to share a single render target across cameras:
 
-/** Allows the application to interact with the compositor */
-class IVRCompositor
-{
-public:
+    SetGraphicsDevice
+    while Running:
+        WaitGetPoses
+        Render(L)
+        Submit(L)
+        Render(R)
+        Submit(R)
+        Update game logic
+
+#Enumerations#
+
+    /** Identifies the graphics API for the associated device */
+    enum Compositor_DeviceType
+    {
+        Compositor_DeviceType_None,
+        Compositor_DeviceType_D3D9,
+        Compositor_DeviceType_D3D9Ex,
+        Compositor_DeviceType_D3D10,
+        Compositor_DeviceType_D3D11,
+        Compositor_DeviceType_OpenGL
+    };
+
+    /** Provides a single frame's timing information to the app */
+    struct Compositor_FrameTiming
+    {
+        uint32_t size; // sizeof(Compositor_FrameTiming)
+        double frameStart;
+        float frameVSync; // seconds from frame start
+        uint32_t droppedFrames;
+        uint32_t frameIndex;
+        vr::TrackedDevicePose_t pose;
+    };
+
+    /** Allows the application to control what part of the provided texture will be used in the
+    * frame buffer. */
+    struct Compositor_TextureBounds
+    {
+        float uMin, vMin;
+        float uMax, vMax;
+    };
+
+#Interfaces#
+
+The vr::IVRCompositor interface contains the following functions:
+
 	/** Returns the last error that occurred in the compositor */
 	virtual uint32_t GetLastError( VR_OUT_STRING() char* pchBuffer, uint32_t unBufferSize ) = 0;
 
@@ -126,5 +151,3 @@ public:
 	/** Computes the overlay-space pixel coordinates of where the ray intersects the overlay with the
 	* specified settings. Returns false if there is no intersection. */
 	virtual bool ComputeOverlayIntersection( const Compositor_OverlaySettings* pSettings, float fAspectRatio, vr::TrackingUniverseOrigin eOrigin, vr::HmdVector3_t vSource, vr::HmdVector3_t vDirection, vr::HmdVector2_t *pvecIntersectionUV, vr::HmdVector3_t *pvecIntersectionTrackingSpace ) = 0;
-
-};
