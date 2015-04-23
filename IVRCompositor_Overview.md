@@ -29,7 +29,9 @@ Alternatively, you may wish to render serially in order to share a single render
 #Enumerations#
 
 [Compositor_DeviceType](https://github.com/ValveSoftware/openvr/wiki/Compositor_DeviceType)
+
 [Compositor_FrameTiming](https://github.com/ValveSoftware/openvr/wiki/Compositor_FrameTiming)
+
 [Compositor_TextureBounds](https://github.com/ValveSoftware/openvr/wiki/Compositor_TextureBounds)
 
 #Interfaces#
@@ -37,26 +39,47 @@ Alternatively, you may wish to render serially in order to share a single render
 The vr::IVRCompositor interface contains the following functions:
 
 [GetLastError](https://github.com/ValveSoftware/openvr/wiki/IVRCompositor::GetLastError)
+
 [SetVSync](https://github.com/ValveSoftware/openvr/wiki/IVRCompositor::SetVSync)
+
 [GetVSync](https://github.com/ValveSoftware/openvr/wiki/IVRCompositor::GetVSync)
+
 [SetGamma](https://github.com/ValveSoftware/openvr/wiki/IVRCompositor::SetGamma)
+
 [GetGamma](https://github.com/ValveSoftware/openvr/wiki/IVRCompositor::GetGamma)
+
 [SetGraphicsDevice](https://github.com/ValveSoftware/openvr/wiki/IVRCompositor::SetGraphicsDevice)
+
 [WaitGetPoses](https://github.com/ValveSoftware/openvr/wiki/IVRCompositor::WaitGetPoses)
+
 [Submit](https://github.com/ValveSoftware/openvr/wiki/IVRCompositor::Submit)
+
 [ClearLastSubmittedFrame](https://github.com/ValveSoftware/openvr/wiki/IVRCompositor::ClearLastSubmittedFrame)
+
 [GetOverlayDefaults](https://github.com/ValveSoftware/openvr/wiki/IVRCompositor::GetOverlayDefaults)
+
 [SetOverlay](https://github.com/ValveSoftware/openvr/wiki/IVRCompositor::SetOverlay)
+
 [SetOverlayRaw](https://github.com/ValveSoftware/openvr/wiki/IVRCompositor::SetOverlayRaw)
+
 [SetOverlayFromFile](https://github.com/ValveSoftware/openvr/wiki/IVRCompositor::SetOverlayFromFile)
+
 [ClearOverlay](https://github.com/ValveSoftware/openvr/wiki/IVRCompositor::ClearOverlay)
+
 [GetFrameTiming](https://github.com/ValveSoftware/openvr/wiki/IVRCompositor::GetFrameTiming)
+
 [FadeToColor](https://github.com/ValveSoftware/openvr/wiki/IVRCompositor::FadeToColor)
+
 [FadeGrid](https://github.com/ValveSoftware/openvr/wiki/IVRCompositor::FadeGrid)
+
 [CompositorBringToFront](https://github.com/ValveSoftware/openvr/wiki/IVRCompositor::CompositorBringToFront)
+
 [CompositorGoToBack](https://github.com/ValveSoftware/openvr/wiki/IVRCompositor::CompositorGoToBack)
+
 [CompositorQuit](https://github.com/ValveSoftware/openvr/wiki/IVRCompositor::CompositorQuit)
+
 [IsFullscreen](https://github.com/ValveSoftware/openvr/wiki/IVRCompositor::IsFullscreen)
+
 [ComputeOverlayIntersection](https://github.com/ValveSoftware/openvr/wiki/IVRCompositor::ComputeOverlayIntersection)
 
 
