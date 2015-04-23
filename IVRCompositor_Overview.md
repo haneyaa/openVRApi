@@ -12,10 +12,10 @@ Example:
     while Running:
         WaitGetPoses
         Render Left and Right cameras
-        Submit
+        Submit Left and Right render targets
         Update game logic
 
-Alternatively, you may wish to share a single render target across cameras:
+Alternatively, you may wish to render serially in order to share a single render target across cameras:
 
     SetGraphicsDevice
     while Running:
