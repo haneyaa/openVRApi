@@ -82,4 +82,7 @@ The vr::IVRCompositor interface contains the following functions:
 
 [ComputeOverlayIntersection](https://github.com/ValveSoftware/openvr/wiki/IVRCompositor::ComputeOverlayIntersection)
 
+[SetTrackingSpace](https://github.com/ValveSoftware/openvr/wiki/IVRCompositor::SetTrackingSpace)
+
+[GetTrackingSpace](https://github.com/ValveSoftware/openvr/wiki/IVRCompositor::GetTrackingSpace)
 
