@@ -28,6 +28,10 @@ Alternatively, you may wish to render serially in order to share a single render
 
 When the application exits, or otherwise stops calling Submit for more than 10 frames in a row, it will fade back to an empty grid scene.  This is to avoid ever leaving the user in an untracked environment so users don't fall over or run into walls.  When all applications have disconnected from the compositor, it will exit automatically after two seconds, unless launched with the --keepalive command line argument.
 
+### Overlay ###
+
+The compositor includes support for rendering 2D content on a floating surface at a higher quality by sampling the source texture directly rather than rasterizing into the scene for each eye.  See [SetOverlay](https://github.com/ValveSoftware/openvr/wiki/IVRCompositor::SetOverlay) and [Compositor_OverlaySettings](https://github.com/ValveSoftware/openvr/wiki/Compositor_OverlaySettings) for more details.
+
 #Enumerations#
 
 [Compositor_DeviceType](https://github.com/ValveSoftware/openvr/wiki/Compositor_DeviceType)
@@ -40,17 +44,13 @@ When the application exits, or otherwise stops calling Submit for more than 10 f
 
 The vr::IVRCompositor interface contains the following functions:
 
-[GetLastError](https://github.com/ValveSoftware/openvr/wiki/IVRCompositor::GetLastError)
-
-[SetVSync](https://github.com/ValveSoftware/openvr/wiki/IVRCompositor::SetVSync)
-
-[GetVSync](https://github.com/ValveSoftware/openvr/wiki/IVRCompositor::GetVSync)
-
-[SetGamma](https://github.com/ValveSoftware/openvr/wiki/IVRCompositor::SetGamma)
-
-[GetGamma](https://github.com/ValveSoftware/openvr/wiki/IVRCompositor::GetGamma)
+### Initialization ##
 
 [SetGraphicsDevice](https://github.com/ValveSoftware/openvr/wiki/IVRCompositor::SetGraphicsDevice)
+
+[GetLastError](https://github.com/ValveSoftware/openvr/wiki/IVRCompositor::GetLastError)
+
+### Core Usage ###
 
 [WaitGetPoses](https://github.com/ValveSoftware/openvr/wiki/IVRCompositor::WaitGetPoses)
 
@@ -58,7 +58,25 @@ The vr::IVRCompositor interface contains the following functions:
 
 [ClearLastSubmittedFrame](https://github.com/ValveSoftware/openvr/wiki/IVRCompositor::ClearLastSubmittedFrame)
 
-[GetOverlayDefaults](https://github.com/ValveSoftware/openvr/wiki/IVRCompositor::GetOverlayDefaults)
+### Accessors ###
+
+[SetGamma](https://github.com/ValveSoftware/openvr/wiki/IVRCompositor::SetGamma)
+
+[GetGamma](https://github.com/ValveSoftware/openvr/wiki/IVRCompositor::GetGamma)
+
+[SetTrackingSpace](https://github.com/ValveSoftware/openvr/wiki/IVRCompositor::SetTrackingSpace)
+
+[GetTrackingSpace](https://github.com/ValveSoftware/openvr/wiki/IVRCompositor::GetTrackingSpace)
+
+[SetVSync](https://github.com/ValveSoftware/openvr/wiki/IVRCompositor::SetVSync)
+
+[GetVSync](https://github.com/ValveSoftware/openvr/wiki/IVRCompositor::GetVSync)
+
+[GetFrameTiming](https://github.com/ValveSoftware/openvr/wiki/IVRCompositor::GetFrameTiming)
+
+[IsFullscreen](https://github.com/ValveSoftware/openvr/wiki/IVRCompositor::IsFullscreen)
+
+### Overlay Support ###
 
 [SetOverlay](https://github.com/ValveSoftware/openvr/wiki/IVRCompositor::SetOverlay)
 
@@ -68,11 +86,15 @@ The vr::IVRCompositor interface contains the following functions:
 
 [ClearOverlay](https://github.com/ValveSoftware/openvr/wiki/IVRCompositor::ClearOverlay)
 
-[GetFrameTiming](https://github.com/ValveSoftware/openvr/wiki/IVRCompositor::GetFrameTiming)
+[GetOverlayDefaults](https://github.com/ValveSoftware/openvr/wiki/IVRCompositor::GetOverlayDefaults)
+
+### Fade Support ###
 
 [FadeToColor](https://github.com/ValveSoftware/openvr/wiki/IVRCompositor::FadeToColor)
 
 [FadeGrid](https://github.com/ValveSoftware/openvr/wiki/IVRCompositor::FadeGrid)
+
+### Focus ###
 
 [CompositorBringToFront](https://github.com/ValveSoftware/openvr/wiki/IVRCompositor::CompositorBringToFront)
 
@@ -80,11 +102,6 @@ The vr::IVRCompositor interface contains the following functions:
 
 [CompositorQuit](https://github.com/ValveSoftware/openvr/wiki/IVRCompositor::CompositorQuit)
 
-[IsFullscreen](https://github.com/ValveSoftware/openvr/wiki/IVRCompositor::IsFullscreen)
+### Utility ###
 
 [ComputeOverlayIntersection](https://github.com/ValveSoftware/openvr/wiki/IVRCompositor::ComputeOverlayIntersection)
-
-[SetTrackingSpace](https://github.com/ValveSoftware/openvr/wiki/IVRCompositor::SetTrackingSpace)
-
-[GetTrackingSpace](https://github.com/ValveSoftware/openvr/wiki/IVRCompositor::GetTrackingSpace)
-
