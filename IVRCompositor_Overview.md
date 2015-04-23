@@ -2,7 +2,7 @@
 
 The vr::IVRCompositor interfaces provides access to the Compositor subsystem.  The Compositor simplifies the process of displaying images to the user by taking care of distortion, prediction, synchronization and other subtle issues that can be a challenge to get operating properly for a solid VR experience.
 
-Applications call WaitGetPoses to get the set of poses used to render the camera and other tracked objects, render the left and right eyes as normal (using the info provided by IVRSystem) and finally Submit those undistorted textures for the Compositor to display in its own window.
+Applications call [WaitGetPoses](https://github.com/ValveSoftware/openvr/wiki/IVRCompositor::WaitGetPoses) to get the set of poses used to render the camera and other tracked objects, render the left and right eyes as normal (using the info provided by IVRSystem) and finally [Submit](https://github.com/ValveSoftware/openvr/wiki/IVRCompositor::Submit) those undistorted textures for the Compositor to display in its own window.
 
 It is recommended that you continue Presenting your application's own window, reusing either the left or right eye camera render target to draw a single quad (perhaps cropped to a lower fov to hide the hidden area mask).
 
