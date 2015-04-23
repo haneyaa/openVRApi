@@ -26,6 +26,8 @@ Alternatively, you may wish to render serially in order to share a single render
         Submit(R)
         Update game logic
 
+When the application exits, or otherwise stops calling Submit for more than 10 frames in a row, it will fade back to an empty grid scene.  This is to avoid ever leaving the user in an untracked environment so users don't fall over or run into walls.  When all applications have disconnected from the compositor, it will exit automatically after two seconds, unless launched with the --keepalive command line argument.
+
 #Enumerations#
 
 [Compositor_DeviceType](https://github.com/ValveSoftware/openvr/wiki/Compositor_DeviceType)
