@@ -6,6 +6,8 @@ Always set 'size' to sizeof(Compositor_OverlaySettings) for proper versioning an
 
 	(uint)System.Runtime.InteropServices.Marshal.SizeOf(typeof(Compositor_OverlaySettings));
 
+### Properties ###
+
 **curved** _[default: true]_ - Toggles between drawing as a segment of a cylinder which flexes as you approach the surface, or simply a flat plane.
 
 **antialias** _[default: true]_ - Controls applying a 2x2 RGSS filter when rendering the surface.
