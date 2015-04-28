@@ -5,16 +5,25 @@ Use [IVRCompositor::GetOverlayDefaults](https://github.com/ValveSoftware/openvr/
 Always set 'size' to sizeof(Compositor_OverlaySettings) for proper versioning and avoid memory corruption.  This includes calling GetOverlayDefaults.  In C# use:
 	(uint)System.Runtime.InteropServices.Marshal.SizeOf(typeof(Compositor_OverlaySettings));
 
-**curved** [default: true] Toggles between drawing as a segment of a cylinder which flexes as you approach the surface, or simply a flat plane.
-**antialias** [default: true] Controls applying a 2x2 RGSS filter when rendering the surface.
-**scale** [default: 3.0] The implicit surface is 1m wide, adopting the aspect ratio of the source texture.  This value allows you to adjust that size.
-**distance** [default: 1.25] Number of meters the surface is drawn from its transform.  By default the overlay is placed at the origin, with the surface rendered 1.25 meters away from and facing the camera.
-**alpha** [default: 1.0] Ramp to control blending with the scene.  Note: The overlay always draws on top - it does not respect the depth buffer.
-**uOffset** [default: 0.0] Used to horizontally shift the contents of the source texture relative to the implicit surface.
-**vOffset** [default: 0.0] Used to vertically shift the contents of the source texture relative to the implicit surface.
-**uScale** [default: 1.0] Used to horizontally scale the contents of the source texture relative to the implicit surface.
-**vScale** [default: 1.0] Used to vertically scale the contents of the source texture relative to the implicit surface.
-**transform** [default: identity] Controls position and orientation of the implicit surface.
+**curved** _[default: true]_ - Toggles between drawing as a segment of a cylinder which flexes as you approach the surface, or simply a flat plane.
+
+**antialias** _[default: true]_ - Controls applying a 2x2 RGSS filter when rendering the surface.
+
+**scale** _[default: 3.0]_ - The implicit surface is 1m wide, adopting the aspect ratio of the source texture.  This value allows you to adjust that size.
+
+**distance** _[default: 1.25]_ - Number of meters the surface is drawn from its transform.  By default the overlay is placed at the origin, with the surface rendered 1.25 meters away from and facing the camera.
+
+**alpha** _[default: 1.0]_ - Ramp to control blending with the scene.  Note: The overlay always draws on top - it does not respect the depth buffer.
+
+**uOffset** _[default: 0.0]_ - Used to horizontally shift the contents of the source texture relative to the implicit surface.
+
+**vOffset** _[default: 0.0]_ - Used to vertically shift the contents of the source texture relative to the implicit surface.
+
+**uScale** _[default: 1.0]_ - Used to horizontally scale the contents of the source texture relative to the implicit surface.
+
+**vScale** _[default: 1.0]_ - Used to vertically scale the contents of the source texture relative to the implicit surface.
+
+**transform** _[default: identity]_ - Controls position and orientation of the implicit surface.
 
 	struct Compositor_OverlaySettings
 	{
