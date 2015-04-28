@@ -3,6 +3,7 @@ Allows the application to customize how the overlay appears in the compositor.  
 Use [IVRCompositor::GetOverlayDefaults](https://github.com/ValveSoftware/openvr/wiki/IVRCompositor::GetOverlayDefaults) to fill out default settings.
 
 Always set 'size' to sizeof(Compositor_OverlaySettings) for proper versioning and avoid memory corruption.  This includes calling GetOverlayDefaults.  In C# use:
+
 	(uint)System.Runtime.InteropServices.Marshal.SizeOf(typeof(Compositor_OverlaySettings));
 
 **curved** _[default: true]_ - Toggles between drawing as a segment of a cylinder which flexes as you approach the surface, or simply a flat plane.
