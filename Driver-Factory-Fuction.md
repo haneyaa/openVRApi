@@ -2,7 +2,10 @@ Every driver dynamic library needs to implement the standard driver factory func
 
 A typical factory function looks like this:
 
-    HMD_DLL_EXPORT void *HmdDriverFactory( const char *pInterfaceName, int *pReturnCode )
+    #define HMD_DLL_EXPORT extern "C" __declspec( dllexport )
+    
+    HMD_DLL_EXPORT 
+    void *HmdDriverFactory( const char *pInterfaceName, int *pReturnCode )
     {
     	if( 0 == strcmp( IServerTrackedDeviceProvider_Version, pInterfaceName ) )
     	{
