@@ -9,9 +9,11 @@ If Init returns anything other than HmdError_None the driver DLL will be unloade
 * pchUserDriverConfigDir - The absolute path of the directory where the driver should store user config files.
 * pchDriverInstallDir - The absolute path of the root directory for the driver.
 
+
 **`void Cleanup()`**;
 
 Cleans up the driver right before it is unloaded
+
 
 **`bool BIsHmdPresent( const char *pchUserConfigDir )`**
 
@@ -19,6 +21,7 @@ Called when the client needs to inform an application if an HMD is attached that
 this driver. This method should be as lightweight as possible and should have no side effects
 such as hooking process functions or leaving resources loaded. Init will not be called before 
 this method and Cleanup will not be called after it.
+
 
 **`HmdError SetDisplayId( const char *pchDisplayId )`**
 
