@@ -7,3 +7,5 @@ Let's say you want to write a new OpenVR driver called "myhmd". To do that you w
 5. Add an implementation of [`vr::IServerTrackedDeviceProvider`](https://github.com/ValveSoftware/openvr/wiki/IServerTrackedDeviceProvider_Overview) and have that return implementations of [`vr::ITrackedDeviceServerDriver`](https://github.com/ValveSoftware/openvr/wiki/vr::ITrackedDeviceServerDriver-Overview) for each tracked device.
 
 If you want your new driver to work from 64 bit apps, you will also need a 64-bit DLL in "drivers/myhmd/bin/win64/driver_myhmd.dll" that implements all the same things. Same thing for other platforms. 
+
+**WARNING:** The driver interface is still under active development and vrserver does not guarantee backward compatibility with old versions of the interface. At this point don't ship driver binaries and expect them to continue to work going forward.
