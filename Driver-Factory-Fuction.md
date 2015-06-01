@@ -9,11 +9,11 @@ A typical factory function looks like this:
     {
     	if( 0 == strcmp( IServerTrackedDeviceProvider_Version, pInterfaceName ) )
     	{
-    		return &g_serverDriverNull;
+    		return <global for server driver provider>;
     	}
     	if( 0 == strcmp( IClientTrackedDeviceProvider_Version, pInterfaceName ) )
     	{
-    		return &g_clientDriverNull;
+    		return <global for client driver provider>;
     	}
     
     	if( pReturnCode )
