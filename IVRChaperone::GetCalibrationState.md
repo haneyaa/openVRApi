@@ -2,7 +2,6 @@ Get the current state of Chaperone calibration. This state can change at any tim
 
 	virtual ChaperoneCalibrationState GetCalibrationState() = 0;
 
-
 	// OK!
 	ChaperoneCalibrationState_OK = 1,									// Chaperone is fully calibrated and working correctly
 
@@ -18,4 +17,3 @@ Get the current state of Chaperone calibration. This state can change at any tim
 	ChaperoneCalibrationState_Error_BaseStationConflict = 202,			// Tracking center is calibrated, but base stations disagree on the tracking space
 	ChaperoneCalibrationState_Error_SoftBoundsInvalid = 203,			// Soft bounds haven't been calibrated for the current tracking center
 	ChaperoneCalibrationState_Error_HardBoundsInvalid = 204,			// Hard bounds haven't been calibrated for the current tracking center
-};
