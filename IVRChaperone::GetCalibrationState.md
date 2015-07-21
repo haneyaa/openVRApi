@@ -3,8 +3,6 @@ Get the current state of Chaperone calibration. This state can change at any tim
 	virtual ChaperoneCalibrationState GetCalibrationState() = 0;
 
 
-enum ChaperoneCalibrationState
-{
 	// OK!
 	ChaperoneCalibrationState_OK = 1,									// Chaperone is fully calibrated and working correctly
 
