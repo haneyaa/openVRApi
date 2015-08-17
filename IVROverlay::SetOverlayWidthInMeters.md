@@ -1,4 +1,5 @@
 `VROverlayError SetOverlayWidthInMeters( VROverlayHandle_t ulOverlayHandle, float fWidthInMeters )`
+
 `VROverlayError GetOverlayWidthInMeters( VROverlayHandle_t ulOverlayHandle, float *pfWidthInMeters )`
 
 Sets/gets the width of the overlay quad in meters. 
