@@ -1,4 +1,5 @@
 `VROverlayError SetOverlayColor( VROverlayHandle_t ulOverlayHandle, float fRed, float fGreen, float fBlue )`
+
 `VROverlayError GetOverlayColor( VROverlayHandle_t ulOverlayHandle, float *pfRed, float *pfGreen, float *pfBlue )`
 
 Sets/gets the color tint of the overlay quad. Use 0.0 to 1.0 per channel.
