@@ -1,4 +1,5 @@
 `VROverlayError SetOverlayAlpha( VROverlayHandle_t ulOverlayHandle, float fAlpha )`
+
 `VROverlayError GetOverlayAlpha( VROverlayHandle_t ulOverlayHandle, float *pfAlpha )`
 
 Sets/gets the alpha of the overlay quad. Use 1.0 for 100 percent opacity and 0.0 for 0 percent opacity.
