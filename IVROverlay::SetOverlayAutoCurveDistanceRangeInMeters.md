@@ -1,4 +1,5 @@
 `VROverlayError SetOverlayAutoCurveDistanceRangeInMeters( VROverlayHandle_t ulOverlayHandle, float fMinDistanceInMeters, float fMaxDistanceInMeters )`
+
 `VROverlayError GetOverlayAutoCurveDistanceRangeInMeters( VROverlayHandle_t ulOverlayHandle, float *pfMinDistanceInMeters, float *pfMaxDistanceInMeters )`
 
 Sets/gets the distance range in meters used to curve the overlay around the viewer. This is only used by the high-quality overlay.
