@@ -1,4 +1,5 @@
 `VROverlayError SetOverlayTransformAbsolute( VROverlayHandle_t ulOverlayHandle, TrackingUniverseOrigin eTrackingOrigin, const HmdMatrix34_t *pmatTrackingOriginToOverlayTransform )`
+
 `VROverlayError GetOverlayTransformAbsolute( VROverlayHandle_t ulOverlayHandle, TrackingUniverseOrigin *peTrackingOrigin, HmdMatrix34_t *pmatTrackingOriginToOverlayTransform )`
 
 Sets the overlay to use an absolute transform or gets the current absolute transform.
