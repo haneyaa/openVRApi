@@ -10,4 +10,5 @@ Sets/gets the distance range in meters used to curve the overlay around the view
 * `float *pfMaxDistanceInMeters` - Receives distance where the overlay will be the least curved
 
 **Description**
+
 For high-quality curved overlays only, sets the distance range in meters from the overlay used to automatically curve the surface around the viewer.  Min is distance is when the surface will be most curved.  Max is when least curved.
