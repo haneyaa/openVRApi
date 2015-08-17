@@ -60,5 +60,5 @@ The vr::IVROverlay interface provides the following functions:
   * [IsDashboardVisible](https://github.com/ValveSoftware/openvr/wiki/IVROverlay::IsDashboardVisible)
   * [IsActiveDashboardOverlay](https://github.com/ValveSoftware/openvr/wiki/IVROverlay::IsActiveDashboardOverlay)
   * [SetDashboardOverlaySceneProcess](https://github.com/ValveSoftware/openvr/wiki/IVROverlay::SetDashboardOverlaySceneProcess)
-  * [GetDashboardOverlaySceneProcess](https://github.com/ValveSoftware/openvr/wiki/IVROverlay::GetDashboardOverlaySceneProcess)
+  * [GetDashboardOverlaySceneProcess](https://github.com/ValveSoftware/openvr/wiki/IVROverlay::SetDashboardOverlaySceneProcess)
   * [ShowDashboard](https://github.com/ValveSoftware/openvr/wiki/IVROverlay::ShowDashboard)
