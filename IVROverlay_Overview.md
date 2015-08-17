@@ -14,6 +14,7 @@ The vr::IVROverlay interface provides the following functions:
   * [CreateOverlay](https://github.com/ValveSoftware/openvr/wiki/IVROverlay::CreateOverlay)
   * [DestroyOverlay](https://github.com/ValveSoftware/openvr/wiki/IVROverlay::DestroyOverlay)
   * [SetHighQualityOverlay](https://github.com/ValveSoftware/openvr/wiki/IVROverlay::SetHighQualityOverlay)
+  * [GetHighQualityOverlay](https://github.com/ValveSoftware/openvr/wiki/IVROverlay::GetHighQualityOverlay)
   * [GetOverlayKey](https://github.com/ValveSoftware/openvr/wiki/IVROverlay::GetOverlayKey)
   * [GetOverlayName](https://github.com/ValveSoftware/openvr/wiki/IVROverlay::GetOverlayName)
   * [GetOverlayImageData](https://github.com/ValveSoftware/openvr/wiki/IVROverlay::GetOverlayImageData)
