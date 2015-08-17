@@ -1,4 +1,5 @@
 `VROverlayError SetOverlayInputMethod( VROverlayHandle_t ulOverlayHandle, VROverlayInputMethod eInputMethod )`
+
 `VROverlayError GetOverlayInputMethod( VROverlayHandle_t ulOverlayHandle, VROverlayInputMethod *peInputMethod )`
 
 Gets or sets the input settings for the specified overlay.
