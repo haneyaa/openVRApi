@@ -21,7 +21,7 @@ The vr::IVROverlay interface provides the following functions:
   * [GetOverlayErrorNameFromEnum](https://github.com/ValveSoftware/openvr/wiki/IVROverlay::GetOverlayErrorNameFromEnum)
 * Overlay Rendering:
   * [SetOverlayFlag](https://github.com/ValveSoftware/openvr/wiki/IVROverlay::SetOverlayFlag)
-  * [GetOverlayFlag](https://github.com/ValveSoftware/openvr/wiki/IVROverlay::GetOverlayFlag)
+  * [GetOverlayFlag](https://github.com/ValveSoftware/openvr/wiki/IVROverlay::SetOverlayFlag)
   * [SetOverlayColor](https://github.com/ValveSoftware/openvr/wiki/IVROverlay::SetOverlayColor)
   * [GetOverlayColor](https://github.com/ValveSoftware/openvr/wiki/IVROverlay::GetOverlayColor)
   * [SetOverlayAlpha](https://github.com/ValveSoftware/openvr/wiki/IVROverlay::SetOverlayAlpha)
