@@ -44,10 +44,10 @@ The vr::IVROverlay interface provides the following functions:
   * [IsOverlayVisible](https://github.com/ValveSoftware/openvr/wiki/IVROverlay::IsOverlayVisible)
 * Overlay Input:
   * [PollNextOverlayEvent](https://github.com/ValveSoftware/openvr/wiki/IVROverlay::PollNextOverlayEvent)
-  * [GetOverlayInputMethod](https://github.com/ValveSoftware/openvr/wiki/IVROverlay::GetOverlayInputMethod)
-  * [SetOverlayInputMethod](https://github.com/ValveSoftware/openvr/wiki/IVROverlay::GetOverlayInputMethod)
-  * [GetOverlayMouseScale](https://github.com/ValveSoftware/openvr/wiki/IVROverlay::GetOverlayMouseScale)
-  * [SetOverlayMouseScale](https://github.com/ValveSoftware/openvr/wiki/IVROverlay::GetOverlayMouseScale)
+  * [SetOverlayInputMethod](https://github.com/ValveSoftware/openvr/wiki/IVROverlay::SetOverlayInputMethod)
+  * [GetOverlayInputMethod](https://github.com/ValveSoftware/openvr/wiki/IVROverlay::SetOverlayInputMethod)
+  * [SetOverlayMouseScale](https://github.com/ValveSoftware/openvr/wiki/IVROverlay::SetOverlayMouseScale)
+  * [GetOverlayMouseScale](https://github.com/ValveSoftware/openvr/wiki/IVROverlay::SetOverlayMouseScale)
   * [ComputeOverlayIntersection](https://github.com/ValveSoftware/openvr/wiki/IVROverlay::ComputeOverlayIntersection)
   * [HandleControllerOverlayInteractionAsMouse](https://github.com/ValveSoftware/openvr/wiki/IVROverlay::HandleControllerOverlayInteractionAsMouse)
 * Setting Overlay Textures:
