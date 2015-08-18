@@ -28,10 +28,6 @@ Alternatively, you may wish to render serially in order to share a single render
 
 When the application exits, or otherwise stops calling Submit for more than 10 frames in a row, it will fade back to an empty grid scene.  This is to avoid ever leaving the user in an untracked environment so users don't fall over or run into walls.  When all applications have disconnected from the compositor, it will exit automatically after two seconds, unless launched with the --keepalive command line argument.
 
-### Overlay ###
-
-The compositor includes support for rendering 2D content on a floating surface at a higher quality by sampling the source texture directly rather than rasterizing into the scene for each eye.  See [SetOverlay](https://github.com/ValveSoftware/openvr/wiki/IVRCompositor::SetOverlay) and [Compositor_OverlaySettings](https://github.com/ValveSoftware/openvr/wiki/Compositor_OverlaySettings) for more details.
-
 #Enumerations#
 
 [Compositor_DeviceType](https://github.com/ValveSoftware/openvr/wiki/Compositor_DeviceType)
@@ -76,18 +72,6 @@ The vr::IVRCompositor interface contains the following functions:
 
 [IsFullscreen](https://github.com/ValveSoftware/openvr/wiki/IVRCompositor::IsFullscreen)
 
-### Overlay Support ###
-
-[SetOverlay](https://github.com/ValveSoftware/openvr/wiki/IVRCompositor::SetOverlay)
-
-[SetOverlayRaw](https://github.com/ValveSoftware/openvr/wiki/IVRCompositor::SetOverlayRaw)
-
-[SetOverlayFromFile](https://github.com/ValveSoftware/openvr/wiki/IVRCompositor::SetOverlayFromFile)
-
-[ClearOverlay](https://github.com/ValveSoftware/openvr/wiki/IVRCompositor::ClearOverlay)
-
-[GetOverlayDefaults](https://github.com/ValveSoftware/openvr/wiki/IVRCompositor::GetOverlayDefaults)
-
 ### Fade Support ###
 
 [FadeToColor](https://github.com/ValveSoftware/openvr/wiki/IVRCompositor::FadeToColor)
@@ -102,6 +86,3 @@ The vr::IVRCompositor interface contains the following functions:
 
 [CompositorQuit](https://github.com/ValveSoftware/openvr/wiki/IVRCompositor::CompositorQuit)
 
-### Utility ###
-
-[ComputeOverlayIntersection](https://github.com/ValveSoftware/openvr/wiki/IVRCompositor::ComputeOverlayIntersection)
