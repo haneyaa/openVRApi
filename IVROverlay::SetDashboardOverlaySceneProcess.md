@@ -1,4 +1,5 @@
 `VROverlayError SetDashboardOverlaySceneProcess( VROverlayHandle_t ulOverlayHandle, uint32_t unProcessId )`
+
 `VROverlayError GetDashboardOverlaySceneProcess( VROverlayHandle_t ulOverlayHandle, uint32_t *punProcessId )`
 
 Sets or gets  the dashboard overlay to only appear when the specified process ID has scene focus.
