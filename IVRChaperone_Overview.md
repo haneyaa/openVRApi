@@ -9,15 +9,6 @@ Notes:
 
 [GetCalibrationState](https://github.com/ValveSoftware/openvr/wiki/IVRChaperone::GetCalibrationState)
 
-[GetSoftBoundsInfo](https://github.com/ValveSoftware/openvr/wiki/IVRChaperone::GetSoftBoundsInfo)
+[GetPlayAreaSize](https://github.com/ValveSoftware/openvr/wiki/IVRChaperone::GetPlayAreaSize)
 
-[GetHardBoundsInfo](https://github.com/ValveSoftware/openvr/wiki/IVRChaperone::GetHardBoundsInfo)
-
-[GetSeatedBoundsInfo](https://github.com/ValveSoftware/openvr/wiki/IVRChaperone::GetSeatedBoundsInfo)
-
-
-
-
-
-
-
+[GetPlayAreaRect](https://github.com/ValveSoftware/openvr/wiki/IVRChaperone::GetPlayAreaRect)
