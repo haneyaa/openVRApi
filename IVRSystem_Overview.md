@@ -32,7 +32,6 @@ The vr::IVRSystem interface contains the following functions:
   * [GetTimeSinceLastVsync](https://github.com/ValveSoftware/openvr/wiki/IVRSystem::GetTimeSinceLastVsync)
   * [GetDXGIOutputInfo](https://github.com/ValveSoftware/openvr/wiki/IVRSystem::GetDXGIOutputInfo)
   * [GetD3D9AdapterIndex](https://github.com/ValveSoftware/openvr/wiki/IVRSystem::GetD3D9AdapterIndex)
-  * [AttachToWindow](https://github.com/ValveSoftware/openvr/wiki/IVRSystem::AttachToWindow)
 * Tracking - Functions to compute the pose of tracked devices
   * [GetDeviceToAbsoluteTrackingPose](https://github.com/ValveSoftware/openvr/wiki/IVRSystem::GetDeviceToAbsoluteTrackingPose)
   * [ResetSeatedZeroPose](https://github.com/ValveSoftware/openvr/wiki/IVRSystem::ResetSeatedZeroPose)
