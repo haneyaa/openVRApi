@@ -41,6 +41,16 @@ Returns true if the system believes that an HMD is present on the system. This f
 This function will return true in situations where vr::VR_Init() will return NULL. It is a quick way to eliminate users that have no VR hardware, but there are some startup conditions that can only be detected by starting the system.
 
 
+`bool vr::VR_IsRuntimeInstalled()`
+
+Returns true if the OpenVR runtime is installed on the system.
+
+
+`char *vr::VR_RuntimePath()`
+
+Returns true if the OpenVR runtime is installed on the system.
+
+
 `const char *VR_GetVRInitErrorAsSymbol( vr::EVRInitError error );`
 
 This function returns the vr::EVRInitError enum value as a string. It can be called any time, regardless of whether the VR system is started up.
@@ -50,3 +60,7 @@ This function returns the vr::EVRInitError enum value as a string. It can be cal
 
 Requests an interface by name from OpenVR. It will return NULL and pass back an error in peError if the interface can't be found. It will always return NULL if vr::VR_Init() has not been called successfully.
 
+
+`bool VR_IsInterfaceVersionValid( const char *pchInterfaceVersion )`
+
+Returns true if the interface name and version is supported by the installed runtime.
