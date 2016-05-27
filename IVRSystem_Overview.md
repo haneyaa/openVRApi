@@ -33,9 +33,6 @@ The vr::IVRSystem interface contains the following functions:
   * [GetDeviceToAbsoluteTrackingPose](https://github.com/ValveSoftware/openvr/wiki/IVRSystem::GetDeviceToAbsoluteTrackingPose)
   * [ResetSeatedZeroPose](https://github.com/ValveSoftware/openvr/wiki/IVRSystem::ResetSeatedZeroPose)
   * [GetSeatedZeroPoseToStandingAbsoluteTrackingPose](https://github.com/ValveSoftware/openvr/wiki/IVRSystem::GetSeatedZeroPoseToStandingAbsoluteTrackingPose)
-* Render Model Functions - Access to models and textures that match the actual physical appearance of devices wherever possible.
-  * [LoadRenderModel](https://github.com/ValveSoftware/openvr/wiki/IVRSystem::LoadRenderModel)
-  * [FreeRenderModel](https://github.com/ValveSoftware/openvr/wiki/IVRSystem::FreeRenderModel)
 * Property functions - Access to non-tracking information about tracked devices
   * [GetTrackedDeviceClass](https://github.com/ValveSoftware/openvr/wiki/IVRSystem::GetTrackedDeviceClass)
   * [IsTrackedDeviceConnected](https://github.com/ValveSoftware/openvr/wiki/IVRSystem::IsTrackedDeviceConnected)
