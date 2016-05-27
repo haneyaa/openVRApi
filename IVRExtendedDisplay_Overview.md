@@ -8,5 +8,5 @@ It should be rare to need to use this interface. It is primarily provided for re
 
 The vr::IVRSystem interface contains the following functions:
 * [GetWindowBounds](https://github.com/ValveSoftware/openvr/wiki/IVRExtendedDisplay::GetWindowBounds)
-* [GetEyeOutputViewport](https://github.com/ValveSoftware/openvr/wiki/IVRSystem::GetEyeOutputViewport)
-* [GetDXGIOutputInfo](https://github.com/ValveSoftware/openvr/wiki/IVRSystem::GetDXGIOutputInfo)
+* [GetEyeOutputViewport](https://github.com/ValveSoftware/openvr/wiki/IVRExtendedDisplay::GetEyeOutputViewport)
+* [GetDXGIOutputInfo](https://github.com/ValveSoftware/openvr/wiki/IVRExtendedDisplay::GetDXGIOutputInfo)
