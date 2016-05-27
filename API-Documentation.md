@@ -7,12 +7,19 @@ The API is implemented as a set of C++ interface classes full of pure virtual fu
 
 Because the OpenVR API causes the game to connect to any attached VR hardware, it is not initialized automatically. To initialize the API and get access to the vr::IVRSystem interface call the openvr::VR_Init function. To close down your connection to the hardware and release your vr::IVRSystem interface, call openvr::VR_Shutdown.
 
-`vr::IVRSystem *openvr::VR_Init( vr::`[`HmdError`](https://github.com/ValveSoftware/openvr/wiki/HmdError)` *peError )`
+`vr::IVRSystem *vr::VR_Init( vr::`[`HmdError`](https://github.com/ValveSoftware/openvr/wiki/HmdError)` *peError, vr::EVRApplicationType eApplicationType )`
+
+eApplicationType must be one of:
+* `VRApplication_Scene` - A 3D application that will be drawing an environment.
+* `VRApplication_Overlay` - An application that only interacts with overlays or the dashboard.
+* `VRApplication_Background` - The application will not start SteamVR. If it is not already running the call with VR_Init will fail with `VRInitError_Init_NoServerForBackgroundApp`.
+* `VRApplication_Utility` - The application will start up even if no hardware is present. Only the IVRSettings and IVRApplications interfaces are guaranteed to work.  This application type is appropriate for things like installers.
 
 The call will return a vr::IVRSystem pointer that allows the game to call other OpenVR API methods. If something fails the call will return NULL and peError will be set to an error code that indicates what the problem was.
-peError - The error code that occurred or vr::HmdError_None if there was no error. See [`vr::HmdError`](https://github.com/ValveSoftware/openvr/wiki/HmdError) for possible error codes.
+peError - The error code that occurred or vr::VRInitError_None if there was no error. See [`vr::HmdError`](https://github.com/ValveSoftware/openvr/wiki/HmdError) for possible error codes.
 
-`void openvr::VR_Shutdown()`
+
+`void vr::VR_Shutdown()`
 
 Shuts down the connection to the VR hardware and cleans up the OpenVR API. The vr::IVRSystem pointer returned by vr::VR_Init will be invalid after this call is made. 
 
