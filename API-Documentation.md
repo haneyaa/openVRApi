@@ -5,7 +5,7 @@ The API is implemented as a set of C++ interface classes full of pure virtual fu
 
 # Initialization and Cleanup
 
-Because the OpenVR API causes the game to connect to any attached VR hardware, it is not initialized automatically. To initialize the API and get access to the vr::IVRSystem interface call the openvr::VR_Init function. To close down your connection to the hardware and release your vr::IVRSystem interface, call openvr::VR_Shutdown.
+Because the OpenVR API causes the game to connect to any attached VR hardware, it is not initialized automatically. To initialize the API and get access to the vr::IVRSystem interface call the vr::VR_Init function. To close down your connection to the hardware and release your vr::IVRSystem interface, call vr::VR_Shutdown.
 
 `vr::IVRSystem *vr::VR_Init( vr::`[`HmdError`](https://github.com/ValveSoftware/openvr/wiki/HmdError)` *peError, vr::EVRApplicationType eApplicationType )`
 
@@ -41,12 +41,12 @@ Returns true if the system believes that an HMD is present on the system. This f
 This function will return true in situations where vr::VR_Init() will return NULL. It is a quick way to eliminate users that have no VR hardware, but there are some startup conditions that can only be detected by starting the system.
 
 
-`const char *VR_GetStringFor HmdError( vr::HmdError error );`
+`const char *VR_GetVRInitErrorAsSymbol( vr::EVRInitError error );`
 
-This function returns an English translation of vr::HmdError enum values. It can be called any time, regardless of whether the VR system is started up.
+This function returns the vr::EVRInitError enum value as a string. It can be called any time, regardless of whether the VR system is started up.
 
 
-`void *VR_GetGenericInterface( const char *pchInterfaceVersion, vr::`[`HmdError`](https://github.com/ValveSoftware/openvr/wiki/HmdError)` *peError )`
+`void *VR_GetGenericInterface( const char *pchInterfaceVersion, vr::`[`EVRInitError `](https://github.com/ValveSoftware/openvr/wiki/HmdError)` *peError )`
 
-Requests an interface by name from OpenVR. It will return NULL and pass back an error in peError if the interface can't be found. It will always return NULL if openvr::VR_Init() has not been called successfully.
+Requests an interface by name from OpenVR. It will return NULL and pass back an error in peError if the interface can't be found. It will always return NULL if vr::VR_Init() has not been called successfully.
 
